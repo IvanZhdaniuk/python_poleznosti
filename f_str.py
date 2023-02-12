@@ -32,3 +32,8 @@ a = list(input().split())
 for i in a:
     print(i)
 
+a = input()
+if a == 'Python':
+    print('ДА')
+else:
+    print('НЕТ')
