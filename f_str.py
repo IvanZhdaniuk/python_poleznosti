@@ -58,11 +58,35 @@
 
 # chess bord
 
-a = input()
-b = input()
-chess = '_abcdefgh'
-if (int(chess.find(a[0])) + int(a[1]))%2 == 0 and int((chess.find(b[0])) + int(b[1]))%2 ==0 or\
-        int((chess.find(a[0])) + int(a[1]))%2 != 0 and int((chess.find(b[0])) + int(b[1]))%2 !=0:
-    print('YES')
-else:
-    print('NO')
+# a = input()
+# b = input()
+# chess = '_abcdefgh'
+# if (int(chess.find(a[0])) + int(a[1]))%2 == 0 and int((chess.find(b[0])) + int(b[1]))%2 ==0 or\
+#         int((chess.find(a[0])) + int(a[1]))%2 != 0 and int((chess.find(b[0])) + int(b[1]))%2 !=0:
+#     print('YES')
+# else:
+#     print('NO')
+#
+# print(text := 'Even' if (int(input()) % 2) == 0 else 'Odd')
+
+
+# print(text:='Even' if int(input())%2==0 else 'Odd')
+
+lang = input("Какой язык программирования будем учить?")
+
+match lang:
+    case "JavaScript":
+        print("Ты можешь стать фронтенд разработчиком")
+    case "Python":
+        print("Ты можешь стать Data Scientist-ом")
+
+    case "PHP":
+        print("Ты можешь стать бекенд разработчиком")
+
+    case "Solidity":
+        print("Ты можешь стать Blockchain разработчиком")
+
+    case "Java":
+        print("Ты можешь стать мобильным разработчиком")
+    case  _:
+        print("Язык не важен, главное уметь решать задачи)")
