@@ -104,22 +104,62 @@
 #     b = b * int(str(b)[0])
 # print(b)
 
-a = int(input())
-count = 0
-sum_bag = 0
-p = 0
-while a > sum_bag:
-    p = int(input())
-    if a >= (sum_bag + p):
-        sum_bag += p
-        count +=1
-    else:
-        print('Довольно!')
-        print(sum_bag)
-        print(count)
-        sum_bag +=p
+# a = int(input())
+# count = 0
+# sum_bag = 0
+# p = 0
+# while a > sum_bag:
+#     p = int(input())
+#     if a >= (sum_bag + p):
+#         sum_bag += p
+#         count +=1
+#     else:
+#         print('Довольно!')
+#         print(sum_bag)
+#         print(count)
+#         sum_bag +=p
+#
+# n, r = int(input()), []
+# while sum(r) <= n:
+#     r.append(int(input()))
+# print('Довольно!', sum(r[:-1]), len(r) - 1, sep='\n')
 
-n, r = int(input()), []
-while sum(r) <= n:
-    r.append(int(input()))
-print('Довольно!', sum(r[:-1]), len(r) - 1, sep='\n')
+# a_1, a_2 = 3, 5
+# a = [2, 8, 8]
+# b = [3, 4, 5, 5, 10]
+# count_a = 0
+# count_b = 0
+# result = []
+# while (a_1 - count_a) > 0 and (a_2 - count_b) > 0:
+#     if b[count_b] >= a[count_a]:
+#         result.append(a[count_a])
+#         count_a += 1
+#     elif b[count_b] <= a[count_a]:
+#         result.append(b[count_b])
+#         count_b += 1
+# if count_a ==a_1 and count_b != a_2:
+#     result += b[(count_b):]
+# elif count_b ==a_2 and count_a != a_1:
+#     result += a[(count_a):]
+# for i in result:
+#     print(i, end=' ')
+
+
+# Поиск делителей числа
+n = int(input())
+i = 1
+a = []
+while i*i <= n:
+    if n%i == 0:
+        if i == n//i:
+            a.append(i)
+        else:
+            a.append(i)
+            a.append(n//i)
+    i += 1
+a.sort()
+if len(a) == 2:
+    print('Yes')
+else:
+    print('No')
+print(sum(a))
