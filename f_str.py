@@ -166,13 +166,41 @@
 #
 # # Алгоритм Евклида:
 
-a = 345
-b = 555
+# a = 35
+# b = 5
+#
+# while b > 0:
+#     c = a % b
+#     a = b
+#     b = c
+# print(a)
 
-while a != b:
-    if a > b:
-        a = a - b
+# a = 75
+# b = 120
+# z = a * b
+# while b > 0:
+#     c = a % b
+#     a = b
+#     b = c
+# z = z/a
+# print(round(z))
+#
+
+
+a = input()
+b = len(a) - 1
+count = 0
+while b > count:
+    if a[count] == 'e' or a[count] == 'a':
+        print('Ага! Нашлась')
+
+        print(a[count])
+
+        break
     else:
-        b = b - a
-print(f'NOD {a}')
+        print(f'Текущая буква: {a[count]}')
+        count += 1
+        print(a[count])
 
+else:
+    print('Распечатали все буквы')
