@@ -145,21 +145,34 @@
 #     print(i, end=' ')
 
 
-# Поиск делителей числа
-n = int(input())
-i = 1
-a = []
-while i*i <= n:
-    if n%i == 0:
-        if i == n//i:
-            a.append(i)
-        else:
-            a.append(i)
-            a.append(n//i)
-    i += 1
-a.sort()
-if len(a) == 2:
-    print('Yes')
-else:
-    print('No')
-print(sum(a))
+# # Поиск делителей числа
+# n = int(input())
+# i = 1
+# a = []
+# while i*i <= n:
+#     if n%i == 0:
+#         if i == n//i:
+#             a.append(i)
+#         else:
+#             a.append(i)
+#             a.append(n//i)
+#     i += 1
+# a.sort()
+# if len(a) == 2:
+#     print('Yes')
+# else:
+#     print('No')
+# print(sum(a))
+#
+# # Алгоритм Евклида:
+
+a = 345
+b = 555
+
+while a != b:
+    if a > b:
+        a = a - b
+    else:
+        b = b - a
+print(f'NOD {a}')
+
