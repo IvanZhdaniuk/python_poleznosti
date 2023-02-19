@@ -187,20 +187,27 @@
 #
 
 
-a = input()
-b = len(a) - 1
-count = 0
-while b > count:
-    if a[count] == 'e' or a[count] == 'a':
-        print('Ага! Нашлась')
+# a = input()
+# b = len(a) - 1
+# count = 0
+# while b > count:
+#     if a[count] == 'e' or a[count] == 'a':
+#         print('Ага! Нашлась')
+#
+#         print(a[count])
+#
+#         break
+#     else:
+#         print(f'Текущая буква: {a[count]}')
+#         count += 1
+#         print(a[count])
+#
+# else:
+#     print('Распечатали все буквы')
 
-        print(a[count])
+# summa kubov
 
-        break
-    else:
-        print(f'Текущая буква: {a[count]}')
-        count += 1
-        print(a[count])
+summa_i = 0
+for i in range(50, 101):
+    print(summa_i :=summa_i + i*i*i)
 
-else:
-    print('Распечатали все буквы')
