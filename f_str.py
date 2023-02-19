@@ -207,7 +207,33 @@
 
 # summa kubov
 
-summa_i = 0
-for i in range(50, 101):
-    print(summa_i :=summa_i + i*i*i)
+# summa_i = 0
+# for i in range(50, 101):
+#     print(summa_i :=summa_i + i*i*i)
+
+# game in kubiki
+from random import randint
+
+a = int(input())
+count_mi = 0
+count_ci = 0
+
+for i in range(a):
+    mi = randint(1, 7)
+    ci = randint(1, 7)
+    print(mi, ci, end=' ')
+    print()
+    if mi > ci:
+        count_mi += 1
+    elif ci > mi:
+        count_ci += 1
+if count_ci > count_mi:
+    print('Chris')
+
+elif count_mi > count_ci:
+    print('Mishka')
+else:
+    print('Friendship is magic!^^')
+
+
 
