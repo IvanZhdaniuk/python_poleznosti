@@ -248,12 +248,27 @@
 # максимальное количество раз, которое встречается какая-либо буква (без учёта регистра) или иной символ во введённой
 # строке.
 
-a = input().lower()
-max_count = 0
-for i in a:
-    if a.count(i) > max_count:
-        max_count=a.count(i)
-print(max_count)
+# a = input().lower()
+# max_count = 0
+# for i in a:
+#     if a.count(i) > max_count:
+#         max_count=a.count(i)
+# print(max_count)
 
+# Для
 
+a = input()
+n = len(a)
+sum_nechet = 0
+sum_chet = 0
+nechet = a[0:n: 2]
+chet =a[1:n: 2]
+for i in nechet:
+    sum_nechet += int(i)
+for i in chet:
+    sum_chet += int(i)
+if (sum_nechet-sum_chet) % 11 == 0:
+    print('YES')
+else:
+    print('NO')
 
