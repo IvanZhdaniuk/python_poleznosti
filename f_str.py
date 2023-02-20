@@ -237,15 +237,23 @@
 
 
 
-a = int(input())
-count = 0
-for i in range(a):
-    text = input()
-    count += 1
-    if 'рок' in text.lower():
-        print(count, text.lower().index('рок'))
+# a = int(input())
+# count = 0
+# for i in range(a):
+#     text = input()
+#     count += 1
+#     if 'рок' in text.lower():
+#         print(count, text.lower().index('рок'))
 
+# максимальное количество раз, которое встречается какая-либо буква (без учёта регистра) или иной символ во введённой
+# строке.
 
+a = input().lower()
+max_count = 0
+for i in a:
+    if a.count(i) > max_count:
+        max_count=a.count(i)
+print(max_count)
 
 
 
