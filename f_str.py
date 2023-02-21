@@ -257,18 +257,72 @@
 
 # Для
 
-a = input()
-n = len(a)
-sum_nechet = 0
-sum_chet = 0
-nechet = a[0:n: 2]
-chet =a[1:n: 2]
-for i in nechet:
-    sum_nechet += int(i)
-for i in chet:
-    sum_chet += int(i)
-if (sum_nechet-sum_chet) % 11 == 0:
-    print('YES')
-else:
-    print('NO')
+# a = input()
+# n = len(a)
+# sum_nechet = 0
+# sum_chet = 0
+# nechet = a[0:n: 2]
+# chet =a[1:n: 2]
+# for i in nechet:
+#     sum_nechet += int(i)
+# for i in chet:
+#     sum_chet += int(i)
+# if (sum_nechet-sum_chet) % 11 == 0:
+#     print('YES')
+# else:
+#     print('NO')
+
+# a = input()
+# count = 0
+# pr = False
+# for i in a:
+#     if i == '(':
+#         count += 1
+#     elif i == ')':
+#         count -= 1
+#         if count < 0:
+#             print('NO')
+#             pr = True
+#             break
+# if count == 0 and pr == False:
+#     print('YES')
+# elif count != 0 and pr == False:
+#     print('NO')
+
+# На вход вашей программе поступает положительное целое число n, а ваша задача
+# вывести в порядке возрастания все цифры, которые встречались в этом числе,
+# и напротив каждого также необходимо вывести сколько раз данная цифра
+# встречалась в числе n
+
+# a = [4, 5, 6, 5, 4, 4]
+# count =[0]*100
+# print(count)
+#
+# for i in a:
+#     count[i] += 1
+# for j in count:
+#     if j > 0:
+#         print(j, count.index(j))
+
+
+# Сортировка подсчетом
+# Как видно из названия задачи, вам необходимо отсортировать список, состоящий только из чисел в пределах от -100 до 100 включительно, сортировкой подсчетом.
+#
+# Программа получает на вход число n - количество элементов в списке, затем сами элементы списка
+#
+# Вам необходимо вывести отсортированный список
+#
+# P.S. не пользуйтесь встроенной функцией sorted или методом sort
+
+b, a = input(), list(map(int, input().split()))
+
+count = [0] * 201
+for i in a:
+    count[i+100] += 1
+
+
+for i in range(201):
+    if count[i] > 0:
+        print((str(i-100)+' ' )*count[i], end='')
+
 
