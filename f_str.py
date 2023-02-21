@@ -314,15 +314,39 @@
 #
 # P.S. не пользуйтесь встроенной функцией sorted или методом sort
 
-b, a = input(), list(map(int, input().split()))
+# b, a = input(), list(map(int, input().split()))
+#
+# count = [0] * 201
+# for i in a:
+#     count[i+100] += 1
+#
+#
+# for i in range(201):
+#     if count[i] > 0:
+#         print((str(i-100)+' ' )*count[i], end='')
+#
+#
+# Найдите сумму всех четырехзначных чисел, сумма цифр каждого из которых равна 20.
+# count = 0
+# count_2 = 0
+#
+# for i in range(1000, 10000):
+#     count = 0
+#     for j in str(i):
+#         count += int(j)
+#     if count == 20:
+#         count_2 +=i
+# print(count_2)
 
-count = [0] * 201
-for i in a:
-    count[i+100] += 1
-
-
-for i in range(201):
-    if count[i] > 0:
-        print((str(i-100)+' ' )*count[i], end='')
-
-
+# сортировка пузырьком
+#
+# a =int(input())
+# b = list(map(int, input().split()))
+# count = 0
+# for run in range(a-1):
+#     for i in range(a-1-run):
+#         if b[i] > b[i+1]:
+#             b[i], b[i+1] = b[i+1], b[i]
+#             count+=1
+# print(*b)
+# print(count)
