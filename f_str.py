@@ -350,3 +350,24 @@
 #             count+=1
 # print(*b)
 # print(count)
+
+
+#
+# n, m = input().split()
+# for a in range(1001):
+#     for b in range(1001):
+#         if a ** 2 + b == n and a + b ** 2 == m:
+#             print(a, b)
+
+
+# сортировка вставками
+
+a = list(map(int, input().split()))
+n = len(a)
+for i in range(n - 1):
+    while a[i] > a[i + 1]:
+
+        a[i], a[i+1] = a[i+1], a[i]
+        if i>0:
+            i -= 1
+        print(a)
