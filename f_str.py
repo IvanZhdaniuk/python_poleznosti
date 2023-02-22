@@ -396,14 +396,27 @@
 #         print(matrix[j][i], end='')
 #     print()
 
-a = int(input())
+# a = int(input())
+# matrix = []
+# for i in range(a):
+#     b = list(map(int, input().split()))
+#     matrix.append(b)
+# for i in range(a-1, -1, -1):
+#
+#     for j in range(a-1, -1, -1):
+#
+#         print(matrix[j][i], end=' ')
+#     print()
+
+a = list(map(int, input().split()))
+
 matrix = []
-for i in range(a):
+for i in range(a[0]):
     b = list(map(int, input().split()))
     matrix.append(b)
-for i in range(a-1, -1, -1):
+for i in range(a[0]):
 
-    for j in range(a-1, -1, -1):
+    for j in range((a[1]-1), -1, -1):
 
-        print(matrix[j][i], end=' ')
+        print(matrix[i][j], end=' ')
     print()
