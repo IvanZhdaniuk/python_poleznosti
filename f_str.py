@@ -360,14 +360,50 @@
 #             print(a, b)
 
 
-# сортировка вставками
+# # сортировка вставками
+#
+# a = list(map(int, input().split()))
+# n = len(a)
+# for i in range(n - 1):
+#     while a[i] > a[i + 1]:
+#
+#         a[i], a[i+1] = a[i+1], a[i]
+#         if i>0:
+#             i -= 1
+#         print(a)
 
-a = list(map(int, input().split()))
-n = len(a)
-for i in range(n - 1):
-    while a[i] > a[i + 1]:
+# Вам нужно посчитать сумму элементов двумерного квадратного (NxN)
+# списка, которые расположены на главной диагонали.
 
-        a[i], a[i+1] = a[i+1], a[i]
-        if i>0:
-            i -= 1
-        print(a)
+# a = int(input())
+# matrix = []
+# summa = 0
+# for i in range(a):
+#     b = list(map(int, input().split()))
+#     matrix.append(b)
+#     summa += matrix[i][i]
+# print(summa)
+
+# work whith matrix
+#
+# a = int(input())
+# matrix = []
+# for i in range(a):
+#     b = list(map(int, input().split()))
+#     matrix.append(b)
+# for i in range(a):
+#     for j in range(a):
+#         print(matrix[j][i], end='')
+#     print()
+
+a = int(input())
+matrix = []
+for i in range(a):
+    b = list(map(int, input().split()))
+    matrix.append(b)
+for i in range(a-1, -1, -1):
+
+    for j in range(a-1, -1, -1):
+
+        print(matrix[j][i], end=' ')
+    print()
