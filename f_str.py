@@ -435,33 +435,153 @@
 #         print(matrix[i][j], end=' ')
 #     print()
 
+#
+# Сумма строк и столбцов двумерного массива
 
-Сумма строк и столбцов двумерного массива
+# a = list(map(int, input().split()))
+#
+# matrix = []
+# summa_columns = 0
+# summa_columns_list = []
+# summa_lines = 0
+# summa_lines_list =[]
+# for i in range((a[0])):
+#     b = list(map(int, input().split()))
+#     matrix.append(b)
+# for i in range((a[0])):
+#     for j in range(a[1]):
+#         summa_lines +=matrix[i][j]
+#     summa_lines_list.append(summa_lines)
+#     summa_lines = 0
+# for i in range(a[1]):
+#     for j in range(a[0]):
+#         summa_columns += matrix[j][i]
+#     summa_columns_list.append(summa_columns)
+#     summa_columns = 0
+#
+# print(*summa_lines_list)
+# print(*summa_columns_list)
+#
 
-a = list(map(int, input().split()))
 
+# Симметричная ли матрица?
+
+# a = int(input())
+# matrix = []
+# flag = True
+# for i in range(a):
+#     b = list(map(int, input().split()))
+#     matrix.append(b)
+# for i in range(a):
+#     for j in range(a):
+#         if matrix[i][j] == matrix[j][i]:
+#             pass
+#         else:
+#             flag = False
+# if flag==True:
+#     print('Yes')
+# else:
+#     print('No')
+
+#
+# a, b = list(map(int, input().split()))
+# matrix = []
+# summa_broskov = 0
+# summa_broskov_max = 0
+# for i in range(a):
+#     matrix.append(list(map(int, input().split())))
+# for i in range(a):
+#     for j in range(b):
+#         summa_broskov += matrix[i][j]
+#
+#
+#     if summa_broskov_max < summa_broskov:
+#         summa_broskov_max = summa_broskov
+#         pobeditel = i
+#
+#     summa_broskov = 0
+# print(summa_broskov_max)
+# print(pobeditel)
+
+#
+# a, b = list(map(int, input().split()))
+# matrix = []
+# max_brosok = 0
+# broskov_max_dsave = 0
+# for i in range(a):
+#     matrix.append(list(map(int, input().split())))
+# for i in range(a):
+#     for j in range(b):
+#         max_brosok = matrix[i][j]
+#
+#
+#     if broskov_max_dsave < max_brosok:
+#         broskov_max_dsave = max_brosok
+#         pobeditel = i
+#         popitca = j
+#
+#     max_brosok = 0
+# print(broskov_max_dsave)
+# print(pobeditel, popitca)
+
+
+# a, b = list(map(int, input().split()))
+# matrix = []
+# max_brosok = 0
+# broskov_max_dsave = 0
+# summa_broskov = 0
+# summa_broskov_dsave = 0
+# count = 1
+# for i in range(a):
+#     matrix.append(list(map(int, input().split())))
+# for i in range(a):
+#     for j in range(b):
+#         max_brosok = matrix[i][j]
+#         summa_broskov += matrix[i][j]
+#         if broskov_max_dsave < max_brosok:
+#             broskov_max_dsave = max_brosok
+#             pobeditel = i
+#             popitca = j
+#             max_brosok =0
+#         elif broskov_max_dsave ==max_brosok:
+#             count +=1
+#     if count >1 and summa_broskov_dsave < summa_broskov:
+#         summa_broskov_dsave = summa_broskov
+#         pobeditel = i
+#         popitca = j
+#         summa_broskov= 0
+# print(pobeditel)
+
+
+# В метании молота состязается n спортcменов. Каждый из них сделал m бросков. Победитель определяется по лучшему результату. Определите количество участников состязаний, которые разделили первое место, то есть определите количество строк в массиве, которые содержат значение, равное наибольшему.
+#
+# Входные данные
+#
+# Программа получает на вход два числа n и m, являющиеся числом строк и столбцов в массиве. Далее во входном потоке идет n строк по m чисел, являющихся элементами массива.
+#
+# Выходные данные
+#
+# Программа должна вывести  одно число - количество победителей соревнования.
+
+
+a, b = list(map(int, input().split()))
 matrix = []
-summa_columns = 0
-summa_columns_list = []
-summa_lines = 0
-summa_lines_list =[]
-for i in range((a[0])):
-    b = list(map(int, input().split()))
-    matrix.append(b)
-for i in range((a[0])):
-    for j in range(a[1]):
-        summa_lines +=matrix[i][j]
-    summa_lines_list.append(summa_lines)
-    summa_lines = 0
-for i in range(a[1]):
-    for j in range(a[0]):
-        summa_columns += matrix[j][i]
-    summa_columns_list.append(summa_columns)
-    summa_columns = 0
+max_brosok = 0
+broskov_max_dsave = 0
+count = 1
+for i in range(a):
+    matrix.append(list(map(int, input().split())))
+for i in range(a):
+    for j in range(b):
+        max_brosok  = matrix[i][j]
+        if broskov_max_dsave < max_brosok:
+            broskov_max_dsave = max_brosok
+            pobeditel = i
+            popitca = j
+            max_brosok =0
+            count = 1
+        elif broskov_max_dsave ==max_brosok:
+            count +=1
 
-print(*summa_lines_list)
-print(*summa_columns_list)
-
-
-
+print(count)
 
