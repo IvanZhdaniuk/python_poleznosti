@@ -421,16 +421,47 @@
 #         print(matrix[i][j], end=' ')
 #     print()
 
+#
+# a = list(map(int, input().split()))
+#
+# matrix = []
+# for i in range((a[0]-1), -1, -1):
+#     b = list(map(int, input().split()))
+#     matrix.append(b)
+# for i in range((a[0]-1), -1, -1):
+#
+#     for j in range(a[1]):
+#
+#         print(matrix[i][j], end=' ')
+#     print()
+
+
+Сумма строк и столбцов двумерного массива
 
 a = list(map(int, input().split()))
 
 matrix = []
-for i in range((a[0]-1), -1, -1):
+summa_columns = 0
+summa_columns_list = []
+summa_lines = 0
+summa_lines_list =[]
+for i in range((a[0])):
     b = list(map(int, input().split()))
     matrix.append(b)
-for i in range((a[0]-1), -1, -1):
-
+for i in range((a[0])):
     for j in range(a[1]):
+        summa_lines +=matrix[i][j]
+    summa_lines_list.append(summa_lines)
+    summa_lines = 0
+for i in range(a[1]):
+    for j in range(a[0]):
+        summa_columns += matrix[j][i]
+    summa_columns_list.append(summa_columns)
+    summa_columns = 0
 
-        print(matrix[i][j], end=' ')
-    print()
+print(*summa_lines_list)
+print(*summa_columns_list)
+
+
+
+
