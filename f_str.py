@@ -563,25 +563,64 @@
 #
 # Программа должна вывести  одно число - количество победителей соревнования.
 
+#
+# a, b = list(map(int, input().split()))
+# matrix = []
+# max_brosok = 0
+# broskov_max_dsave = 0
+# count = 1
+# for i in range(a):
+#     matrix.append(list(map(int, input().split())))
+# for i in range(a):
+#     for j in range(b):
+#         max_brosok  = matrix[i][j]
+#         if broskov_max_dsave < max_brosok:
+#             broskov_max_dsave = max_brosok
+#             pobeditel = i
+#             popitca = j
+#             max_brosok =0
+#             count = 1
+#         elif broskov_max_dsave ==max_brosok:
+#             count +=1
+#
+# print(count)
+#
+#
+# На днях Иван у себя в прихожей выложил кафель, состоящий из квадратных черных и белых плиток. Прихожая Ивана имеет квадратную форму 4х4, вмещающую 16 плиток. Теперь Иван переживает, что узор из плиток, который у него получился, может быть не симпатичным. С точки зрения дизайна симпатичным узором считается тот, который не содержит в себе квадрата 2х2, состоящего из плиток одного цвета.
+#
+# Примеры возможных узоров:
+#
+# Симпатичный узор
+#
+# По заданному расположению плиток в прихожей Ивана требуется определить: является ли выполненный узор симпатичным.
+#
+# Программе поступает на вход 4 строки по 4 символа «W» или «B» в каждой, описывающие узор из плиток. Символ «W» обозначает плитку белого цвета, а «B» - черного.
+#
+# Ваша задача вывести «Yes», если узор является симпатичным и «No» в противном
+#
+#
+# flag =True
+# matrix = []
+# count = 1
+# for i in range(4):
+#     matrix.append(input())
+# for i in range(1, 3, 1):
+#     for j in range(1, 3, 1):
+#         if matrix[i][j] == matrix[i][j-1] and matrix[i][j] == matrix[i-1][j-1]and \
+#         matrix[i][j] == matrix[i-1][j]:
+#             flag =False
+#         if matrix[i][j] == matrix[i-1][j] and matrix[i][j] == matrix[i-1][j+1]and \
+#         matrix[i][j] == matrix[i][j+1]:
+#             flag =False
+#         if matrix[i][j] == matrix[i][j+1] and matrix[i][j] == matrix[i+1][j+1]and \
+#         matrix[i][j] == matrix[i+1][j]:
+#             flag =False
+#         if matrix[i][j] == matrix[i][j-1] and matrix[i][j] == matrix[i +1][j] and \
+#                 matrix[i][j] == matrix[i +1][j-1]:
+#             flag = False
+# if flag == False:
+#     print('No')
+# else:
+#     print('Yes')
 
-a, b = list(map(int, input().split()))
-matrix = []
-max_brosok = 0
-broskov_max_dsave = 0
-count = 1
-for i in range(a):
-    matrix.append(list(map(int, input().split())))
-for i in range(a):
-    for j in range(b):
-        max_brosok  = matrix[i][j]
-        if broskov_max_dsave < max_brosok:
-            broskov_max_dsave = max_brosok
-            pobeditel = i
-            popitca = j
-            max_brosok =0
-            count = 1
-        elif broskov_max_dsave ==max_brosok:
-            count +=1
-
-print(count)
 
